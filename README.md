@@ -57,7 +57,7 @@ The project uses the following original data files:
 
 The data contain repeated decision points nested within participants.
 
-### Dataset dimensions
+### Dataset Dimensions
 
 The original data files used in the analysis had the following dimensions:
 
@@ -80,7 +80,7 @@ The analysis involved several data-processing and eligibility checks.
 
 The sample flow was:
 
-| Processing stage | Observations |
+| Processing Stage | Observations |
 |---|---:|
 | Original decision records | 8,274 |
 | After travel exclusions | 7,884 |
@@ -105,17 +105,17 @@ One available decision point had a sent suggestion but empty active and sedentar
 
 ## 6. Outcome and Predictor Variables
 
-### Primary outcome
+### Primary Outcome
 
 The primary outcome was subsequent 30-minute step activity.
 
 The outcome was log-transformed for the GEE models.
 
-### Pretreatment activity
+### Pretreatment Activity
 
 Pretreatment 30-minute step activity was included as an adjustment variable.
 
-### Treatment predictors
+### Treatment Predictors
 
 Two treatment indicators were created:
 
@@ -130,7 +130,7 @@ Treatment indicators were centred for the statistical models.
 
 All statistical analyses were conducted using R.
 
-### 7.1 Primary analysis: Generalized Estimating Equations
+### 7.1 Primary Analysis: Generalized Estimating Equations
 
 The primary analysis used Gaussian Generalized Estimating Equations (GEE).
 
@@ -145,19 +145,19 @@ The model included:
 
 The participant identifier was used to define clusters.
 
-### 7.2 Independence correlation model
+### 7.2 Independence Correlation Model
 
 A second GEE model used an independence working correlation structure.
 
 This analysis examined whether the estimated treatment associations were consistent under a different working correlation assumption.
 
-### 7.3 Zero-adjusted sensitivity analysis
+### 7.3 Zero-Adjusted Sensitivity Analysis
 
 An additional sensitivity analysis used zero-adjusted step activity variables.
 
 The purpose was to examine whether the main treatment estimates were sensitive to the handling of zero step totals before logarithmic transformation.
 
-### 7.4 Missing-data assessment
+### 7.4 Missing-Data Assessment
 
 Missingness was examined across treatment conditions.
 
@@ -172,11 +172,11 @@ These analyses were exploratory and were not intended to establish that missing 
 
 ## 8. Main Findings
 
-### 8.1 Primary GEE results
+### 8.1 Primary GEE Results
 
 The primary exchangeable GEE model produced the following estimates:
 
-| Treatment | Estimated percentage difference | p-value |
+| Treatment | Estimated Percentage Difference | p-value |
 |---|---:|---:|
 | Walking suggestion | +22.65% | .019 |
 | Anti-sedentary suggestion | +7.35% | .434 |
@@ -185,11 +185,11 @@ Walking suggestions were associated with approximately 22.65% higher subsequent 
 
 The anti-sedentary estimate was positive but was not statistically significant.
 
-### 8.2 Sensitivity analyses
+### 8.2 Sensitivity Analyses
 
 The estimated associations were broadly consistent across the additional models.
 
-| Model | Walking estimate | Anti-sedentary estimate |
+| Model | Walking Estimate | Anti-Sedentary Estimate |
 |---|---:|---:|
 | Primary exchangeable GEE | +22.65% | +7.35% |
 | Independence GEE | +22.55% | +8.25% |
@@ -201,7 +201,7 @@ The anti-sedentary association remained statistically non-significant.
 
 ### 8.3 Interpretation
 
-The findings suggest that walking suggestions were associated with higher subsequent step activity in this secondary analysis.
+The findings suggest that decision points with walking suggestions were associated with higher subsequent step activity than decision points with no suggestions in this secondary analysis.
 
 However, the results do not establish that the suggestions definitively caused an increase in physical activity.
 
@@ -209,17 +209,28 @@ The findings should be interpreted cautiously in light of the number of particip
 
 ## 9. Reproducible Analysis and Project Structure
 
-The complete analysis workflow is organised in the following master script:
+The GitHub repository contains the master analysis script, final result tables, session information, and this README file.
 
-`04_HeartSteps_COMPLETE_MASTER_SCRIPT.R`
+```text
+HeartSteps-V1-Secondary-Analysis/
+│
+├── 04_HeartSteps_COMPLETE_MASTER_SCRIPT.R
+├── 01_sample_flow.csv
+├── 02_primary_model_effects.csv
+├── 03_independence_model_effects.csv
+├── 04_zero_adjusted_effects.csv
+├── 05_missingness_by_treatment.csv
+├── 06_post_missingness_odds_ratios.csv
+├── 07_pre_missingness_odds_ratios.csv
+├── 08_final_model_comparison.csv
+├── 09_all_gee_model_coefficients.csv
+├── sessionInfo.txt
+└── README.md
+```
 
-The script contains 44 numbered steps covering data processing, treatment classification, sample construction, statistical analyses, sensitivity analyses, missingness assessment, and results export.
+### Local RStudio Working Directory
 
-The script was successfully executed in a clean R session.
-
-The final results were exported into CSV files.
-
-### Project directory
+The local working directory used to conduct the analysis contains the original data files and the results folder.
 
 ```text
 HeartSteps_Real_Data_Project/
@@ -249,9 +260,9 @@ HeartSteps_Real_Data_Project/
 └── 04_HeartSteps_COMPLETE_MASTER_SCRIPT.R
 ```
 
-### Reproducibility information
+### Reproducibility Information
 
-The file `results/sessionInfo.txt` records the R session and package information used during the analysis.
+The file `sessionInfo.txt` records the R session and package information used during the analysis.
 
 The master script was tested after restarting R, and the expected nine output tables were verified.
 
@@ -262,6 +273,8 @@ To reproduce the analysis:
 3. Open the master R script in RStudio.
 4. Set the working directory to the project root if necessary.
 5. Execute the script from the beginning.
+
+The original participant-level data files are not included in this public repository.
 
 ## 10. Limitations
 
@@ -302,7 +315,7 @@ This project provided practical experience in:
 
 ## 12. Project Purpose
 
-This project was developed to strengthen practical research experience in quantitative psychology, digital mental health interventions, longitudinal data analysis, and reproducible statistical methods.
+This project was developed to strengthen practical research experience in quantitative psychology, digital health interventions, longitudinal data analysis, and reproducible statistical methods.
 
 It demonstrates an independent secondary-data workflow using an existing mobile health intervention dataset.
 
