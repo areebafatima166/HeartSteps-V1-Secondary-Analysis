@@ -1,0 +1,5 @@
+"Predictor","Odds_Ratio","CI_Lower","CI_Upper","P_Value"
+"(Intercept)",0.068,0.046,0.101,0
+"log_pre",0.759,0.71,0.812,0
+"treatmentno_suggestion",0.88,0.668,1.158,0.361
+"treatmentsedentary",1.025,0.757,1.389,0.872

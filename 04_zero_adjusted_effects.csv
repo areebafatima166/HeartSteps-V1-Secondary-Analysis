@@ -1,0 +1,3 @@
+"Treatment","Estimate","SE","P_Value","Effect_Percent","CI_Lower_Percent","CI_Upper_Percent"
+"Walking",0.212,0.081,0.009,23.627,5.449,44.938
+"Anti-sedentary",0.025,0.083,0.759,2.581,-12.811,20.689

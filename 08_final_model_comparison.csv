@@ -1,0 +1,7 @@
+"Model","Treatment","Estimate","SE","Effect_Percent","CI_Lower_Percent","CI_Upper_Percent","P_Value"
+"Exchangeable complete-case","Walking",0.204,0.087,22.653,3.465,45.4,0.019
+"Exchangeable complete-case","Anti-sedentary",0.071,0.091,7.346,-10.13,28.22,0.434
+"Independence complete-case","Walking",0.203,0.087,22.547,3.425,45.206,0.019
+"Independence complete-case","Anti-sedentary",0.079,0.093,8.249,-9.78,29.88,0.394
+"Zero-adjusted exchangeable","Walking",0.212,0.081,23.627,5.449,44.938,0.009
+"Zero-adjusted exchangeable","Anti-sedentary",0.025,0.083,2.581,-12.811,20.689,0.759
