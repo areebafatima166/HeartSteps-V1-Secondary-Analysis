@@ -4,13 +4,13 @@
 
 This project presents an independent secondary analysis of the publicly available HeartSteps V1 dataset.
 
-The study investigates whether contextually tailored physical activity suggestions are associated with changes in participants' subsequent step activity.
+The study investigates whether contextually tailored physical activity suggestions are associated with differences in participants' subsequent step activity.
 
 HeartSteps is a mobile health intervention designed to encourage physical activity through suggestions delivered at different decision points throughout the day.
 
 This project uses longitudinal data and Generalized Estimating Equations (GEE) to examine the relationships between intervention conditions and subsequent physical activity.
 
-The analysis was conducted in R using a reproducible workflow, including data cleaning, treatment classification, study-day reconstruction, missing-data assessment, statistical modelling, and sensitivity analyses.
+The analysis was conducted in R using a reproducible workflow that included data cleaning, treatment classification, study-day reconstruction, missing-data assessment, statistical modelling, and sensitivity analyses.
 
 ## 2. Research Question
 
@@ -40,7 +40,7 @@ https://github.com/klasnja/HeartStepsV1
 
 The original research paper is cited to acknowledge the study from which the secondary-analysis data originate.
 
-This project is an independent secondary analysis and does not claim to reproduce the original paper's primary statistical estimator.
+This project is an independent secondary analysis. It does not claim to reproduce the original paper's primary statistical estimator.
 
 ## 4. Dataset Description
 
@@ -209,23 +209,27 @@ The findings should be interpreted cautiously in light of the number of particip
 
 ## 9. Reproducible Analysis and Project Structure
 
-The GitHub repository contains the master analysis script, final result tables, session information, and this README file.
+The public GitHub repository contains the master analysis script, nine final result tables, session information, and this README file.
+
+### GitHub Repository Structure
+
+The following structure reflects the files currently uploaded to the public GitHub repository:
 
 ```text
 HeartSteps-V1-Secondary-Analysis/
 │
-├── 04_HeartSteps_COMPLETE_MASTER_SCRIPT.R
 ├── 01_sample_flow.csv
 ├── 02_primary_model_effects.csv
 ├── 03_independence_model_effects.csv
+├── 04_HeartSteps_COMPLETE_MASTER_SCRIPT.R
 ├── 04_zero_adjusted_effects.csv
 ├── 05_missingness_by_treatment.csv
 ├── 06_post_missingness_odds_ratios.csv
 ├── 07_pre_missingness_odds_ratios.csv
 ├── 08_final_model_comparison.csv
 ├── 09_all_gee_model_coefficients.csv
-├── sessionInfo.txt
-└── README.md
+├── README.md
+└── sessionInfo.txt
 ```
 
 ### Local RStudio Working Directory
